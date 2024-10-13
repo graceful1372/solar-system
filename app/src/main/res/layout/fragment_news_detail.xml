@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".ui.news_detail.NewsDetailFragment">
+
+    <!--Back-->
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="@dimen/_35mdp"
+        android:layout_height="@dimen/_35mdp"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:background="@drawable/bg_view"
+        android:padding="@dimen/_12mdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Title news-->
+    <TextView
+        android:id="@+id/nameNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:gravity="center"
+        android:text="جدید ترین اکتشافات"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16font_mdp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@+id/back_btn" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_20mdp"
+        android:layout_marginVertical="@dimen/_16mdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameNews">
+
+        <!--Scroll-->
+        <ScrollView
+            android:id="@+id/scrollLay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--Lay content-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--Content news -->
+                <TextView
+                    android:id="@+id/content_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingVertical="@dimen/_10mdp"
+                    android:layout_marginHorizontal="@dimen/_10mdp"
+                    android:lineSpacingExtra="@dimen/_8mdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11font_mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+        <!--Shadow top-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15mdp"
+            android:alpha="0.5"
+            android:background="@drawable/bg_shadow_news"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--Shadow bot-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15mdp"
+            android:alpha="0.5"
+            android:background="@drawable/bg_shadow_news"
+            android:rotation="180"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

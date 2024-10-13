@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ir.hmb72.space.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_introductionFragment"
+            app:destination="@id/introductionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/actionToNewsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/introductionFragment"
+        android:name="ir.hmb72.space.ui.introduction.IntroductionFragment"
+        android:label="fragment_introduction"
+        tools:layout="@layout/fragment_introduction" >
+        <argument
+            android:name="info_item"
+            app:argType="ir.hmb72.space.data.model.home.PlanetModel" />
+        <action
+            android:id="@+id/actionToDescription"
+            app:destination="@id/introductionInfoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/introductionInfoFragment"
+        android:name="ir.hmb72.space.ui.introduction_info.IntroductionInfoFragment"
+        android:label="fragment_introduction_info"
+        tools:layout="@layout/fragment_introduction_info" >
+        <argument
+            android:name="description"
+            app:argType="ir.hmb72.space.data.model.home.PlanetModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="ir.hmb72.space.ui.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <action
+        android:id="@+id/actionToDetailNewsFragment"
+        app:destination="@id/newsDetailFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="ir.hmb72.space.ui.news_detail.NewsDetailFragment"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail" >
+        <argument
+            android:name="detailNews"
+            app:argType="ir.hmb72.space.data.model.home.PlanetModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutMeFragment"
+        android:name="ir.hmb72.space.ui.about.AboutMeFragment"
+        android:label="fragment_about_me"
+        tools:layout="@layout/fragment_about_me" />
+</navigation>

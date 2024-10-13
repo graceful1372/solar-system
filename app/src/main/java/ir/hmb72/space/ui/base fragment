@@ -1,0 +1,25 @@
+class HomeFragment : Fragment() {
+    //Binding
+    private var _binding:FragmentHomeBinding?= null
+    private val binding get()= _binding!!
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View {
+        _binding = FragmentHomeBinding.inflate(layoutInflater)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //InitViews
+        binding.apply {
+
+        }
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
+}

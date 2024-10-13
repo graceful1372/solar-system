@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".ui.home.HomeFragment">
+
+    <!--Search bottom-->
+    <ImageView
+        android:id="@+id/search_btn"
+        android:layout_width="@dimen/_35mdp"
+        android:layout_height="@dimen/_35mdp"
+        android:layout_margin="@dimen/_16mdp"
+        android:background="@drawable/bg_view"
+        android:padding="@dimen/_8mdp"
+        android:src="@drawable/ic_search"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+    <!--Menu-->
+    <ImageView
+        android:id="@+id/menu_btn"
+        android:layout_width="@dimen/_35mdp"
+        android:layout_height="@dimen/_35mdp"
+        android:layout_margin="@dimen/_16mdp"
+        android:background="@drawable/bg_view"
+        android:padding="@dimen/_8mdp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+    <!--Lay menu-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/go_about_me"
+        android:layout_width="@dimen/_100mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:layout_marginEnd="@dimen/_5mdp"
+        android:background="@color/white"
+        android:elevation="@dimen/_3mdp"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/_3mdp"
+        app:layout_constraintEnd_toEndOf="@id/menu_btn"
+        app:layout_constraintTop_toBottomOf="@id/menu_btn">
+
+        <TextView
+            android:layout_width="@dimen/_100mdp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2mdp"
+            android:paddingEnd="@dimen/_5mdp"
+            android:text="@string/about_me"
+            android:textSize="@dimen/_14font_mdp" />
+    </androidx.cardview.widget.CardView>
+    <!--Welcome-->
+    <!--Label's-->
+    <!--Main item-->
+    <TextView
+        android:id="@+id/welcome_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:layout_marginEnd="@dimen/_8mdp"
+        android:fontFamily="@font/iransans_bold"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/menu_btn"
+        app:layout_constraintTop_toBottomOf="@id/menu_btn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_13mdp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/welcome_txt"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        app:layout_constraintTop_toBottomOf="@id/list_category" />
+    <!--Discoveries txt-->
+    <TextView
+        android:id="@+id/discoveries_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:text="@string/new_discoveries"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_main" />
+    <!--Show all-->
+    <TextView
+        android:id="@+id/show_all_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:text="@string/show_all"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10mdp"
+        app:layout_constraintBottom_toBottomOf="@id/discoveries_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/discoveries_txt" />
+    <!--View news-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lay_news"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_30mdp"
+        android:layout_marginVertical="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:background="@drawable/bg_view"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/discoveries_txt">
+
+        <!--Header-->
+        <TextView
+            android:id="@+id/title_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6mdp"
+            android:layout_marginEnd="@dimen/_10mdp"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12font_mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="85 سیاره جدید کشف شده است" />
+        <!--Icon go next-->
+        <ImageView
+            android:id="@+id/icon_go_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16mdp"
+            android:layout_marginTop="@dimen/mines6mdp"
+            android:background="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_news" />
+        <!--Content-->
+        <TextView
+            android:id="@+id/content_news"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_32mdp"
+            android:layout_marginBottom="@dimen/_5mdp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_1mdp"
+            android:maxLines="5"
+            android:textColor="@color/Celeste"
+            android:textSize="@dimen/_10font_mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon_go_news"
+            tools:text="85 سیاره جدید کشف شده است" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

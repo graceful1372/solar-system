@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".ui.about.AboutMeFragment">
+
+    <!--Back-->
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="@dimen/_35mdp"
+        android:layout_height="@dimen/_35mdp"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:background="@drawable/bg_view"
+        android:padding="@dimen/_12mdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Title fragment-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16mdp"
+        android:text="@string/about_me"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_btn" />
+    <!--Content about-->
+    <TextView
+        android:id="@+id/about_content"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20mdp"
+       android:layout_marginHorizontal="@dimen/_16mdp"
+        android:lineSpacingExtra="@dimen/_8mdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13font_mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_btn" />
+    <!--Address gmail-->
+    <TextView
+        android:id="@+id/gmail_txt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40mdp"
+        android:layout_marginHorizontal="@dimen/_40mdp"
+        android:layout_marginTop="@dimen/_40mdp"
+        android:background="@drawable/bg_view"
+        android:gravity="center"
+        android:paddingStart="@dimen/_10mdp"
+        android:text="ارتباط با رایانامه"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14font_mdp"
+        app:drawableStartCompat="@drawable/ic_gmail"
+        app:layout_constraintTop_toBottomOf="@id/about_content" />
+    <!--Address Linkedin-->
+    <TextView
+        android:id="@+id/linkedin_txt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40mdp"
+        android:layout_marginHorizontal="@dimen/_40mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:background="@drawable/bg_view"
+        android:gravity="center"
+        android:paddingStart="@dimen/_10mdp"
+        android:text="ارتباط با لینکدین"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14font_mdp"
+        app:drawableStartCompat="@drawable/ic_linkedin"
+        app:layout_constraintTop_toBottomOf="@id/gmail_txt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

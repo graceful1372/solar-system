@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.news.NewsFragment">
+    <!--Back-->
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="@dimen/_35mdp"
+        android:layout_height="@dimen/_35mdp"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:background="@drawable/bg_view"
+        android:padding="@dimen/_12mdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Title fragment-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="جدید ترین اکتشافات"
+        android:textColor="@color/white"
+        android:fontFamily="@font/iransans_bold"
+        android:textSize="@dimen/_14font_mdp"
+        app:layout_constraintTop_toTopOf="@id/back_btn"
+        app:layout_constraintBottom_toBottomOf="@id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_16mdp"/>
+    <!--List news-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listNews"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5mdp"
+        app:layout_constraintTop_toBottomOf="@id/back_btn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

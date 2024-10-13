@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_250mdp"
+    android:background="@android:color/transparent">
+    <!--Main lay-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view"
+        android:layout_width="@dimen/_190mdp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_35mdp"
+        android:layout_marginTop="@dimen/_35mdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--Name-->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16mdp"
+            android:layout_marginBottom="@dimen/_35mdp"
+            android:alpha="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20font_mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="زمین" />
+        <!--Icon go next-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20mdp"
+            android:background="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--Image-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_item"
+        android:layout_width="@dimen/_190mdp"
+        android:layout_height="@dimen/_190mdp"
+        android:layout_marginStart="@dimen/mines35mdp"
+        android:layout_marginTop="@dimen/mines35mdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        tools:background="@drawable/img_planet_saturn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

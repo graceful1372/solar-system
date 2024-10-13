@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginHorizontal="@dimen/_30mdp"
+    android:layout_marginTop="@dimen/_16mdp"
+    android:background="@drawable/bg_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+        <!--Header-->
+        <TextView
+            android:id="@+id/title_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_7mdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14font_mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="85 سیاره جدید کشف شده است" />
+        <!--Icon go next-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16mdp"
+            android:layout_marginTop="@dimen/mines6mdp"
+            android:background="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_news" />
+        <!--Header-->
+        <TextView
+            android:id="@+id/content_news"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_25mdp"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:layout_marginBottom="@dimen/_16mdp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:lineSpacingExtra="@dimen/_1mdp"
+            android:textColor="@color/Celeste"
+            android:textSize="@dimen/_10font_mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:text="85 سیاره جدید کشف شده است" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.introduction.IntroductionFragment">
+
+
+    <!--back-->
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="@dimen/_35mdp"
+        android:layout_height="@dimen/_35mdp"
+        android:layout_marginStart="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:background="@drawable/bg_view"
+        android:padding="@dimen/_12mdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--title-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16mdp"
+        android:text="@string/overview"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_btn" />
+    <!--Tab's-->
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_50mdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/back_btn">
+        <!--Degree-->
+        <TextView
+            android:id="@+id/tab_degree"
+            style="@style/TextStyle"
+            android:text="360"
+            android:visibility="gone" />
+        <!--Image-->
+        <TextView
+            android:id="@+id/tab_img"
+            style="@style/TextStyle"
+            android:text="عکس ها"
+            android:visibility="gone" />
+
+    </LinearLayout>
+    <!--Info-->
+    <TextView
+        android:id="@+id/tab_info"
+        style="@style/TextStyle"
+        android:layout_marginEnd="@dimen/_16mdp"
+        android:text="اطلاعات"
+        android:layout_marginTop="@dimen/_10mdp"
+         android:drawablePadding="@dimen/_5mdp"
+        app:drawableRightCompat="@drawable/ic_go"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_btn" />
+    <!--Image-->
+    <ImageView
+        android:id="@+id/img_introduce"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_300mdp"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_info"
+        tools:background="@drawable/img_planet_earth" />
+    <!--Name-->
+    <TextView
+        android:id="@+id/name_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16mdp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20font_mdp"
+        app:layout_constraintTop_toBottomOf="@id/img_introduce"
+        tools:text="زمین" />
+    <!--info one-->
+    <TextView
+        android:id="@+id/info_one_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/royalBlue"
+        android:textSize="@dimen/_16font_mdp"
+        app:layout_constraintBottom_toTopOf="@+id/info_one_content"
+        app:layout_constraintEnd_toEndOf="@+id/info_one_content"
+        app:layout_constraintStart_toStartOf="@+id/info_one_content"
+        tools:text="اول" />
+
+    <TextView
+        android:id="@+id/info_one_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_50mdp"
+        android:layout_marginBottom="@dimen/_16mdp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="313dp"
+        tools:text="5100000" />
+
+    <!--info two-->
+    <TextView
+        android:id="@+id/info_two_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/royalBlue"
+        android:textSize="@dimen/_16font_mdp"
+        app:layout_constraintBottom_toTopOf="@+id/info_two_content"
+        app:layout_constraintEnd_toEndOf="@+id/info_two_content"
+        app:layout_constraintStart_toStartOf="@+id/info_two_content"
+        tools:text="دوم" />
+
+    <TextView
+        android:id="@+id/info_two_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20mdp"
+        android:layout_marginBottom="@dimen/_16mdp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="5100000" />
+</androidx.constraintlayout.widget.ConstraintLayout>
